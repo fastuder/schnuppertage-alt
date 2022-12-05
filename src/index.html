@@ -1,16 +1,115 @@
 <!DOCTYPE html>
 <html lang="de">
 
+<!-- head: Nicht-sichtbarer Teil der Seite -->
+
 <head>
+    <!-- Ignorieren -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- ---------- -->
+
+    <!-- Einbinden der CSS Datei -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    <!-- title: Titel der Webseite, nur im Tab sichtbar -->
     <title>Meine Webseite</title>
 </head>
 
-<body>
+<!-- body: Sichtbarer Teil der Seite -->
 
+<body>
+    <!-- header: Kopf der Webseite -->
+    <header>
+        <!-- h1: (Haupt-)Überschrift (h1, h2, ..., h6) -->
+        <h1>Meine Überschrift</h1>
+        <p>Ein kleiner Untertitel</p>
+    </header>
+
+    <!-- main: Hauptinhalt der Webseite -->
+    <main>
+        <!-- h2: Überschrift -->
+        <h2>Das ist der Hauptinhalt</h2>
+
+        <!-- section: Inhaltlicher Abschnitt der Seite -->
+        <section>
+            <!-- h3: Überschrift -->
+            <h3>Das ist ein Abschnitt des Hauptinhalts</h3>
+
+            <!-- p: Textparagraph -->
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur impedit illum nulla repellendus
+                fuga deserunt dolore corrupti molestias, aperiam natus magni, tenetur nesciunt, recusandae saepe commodi
+                alias ex aspernatur aliquam!</p>
+        </section>
+
+        <section>
+            <h3>Das ist ein weiterer Abschnitt des Hauptinhalts</h3>
+
+            <!-- ul: Nicht-numerierte Liste -->
+            <ul>
+
+                <!-- li: Element einer Liste -->
+                <li>Listenelement 1</li>
+                <li>Listenelement 2</li>
+                <li>Listenelement 3</li>
+                <li>Listenelement 4</li>
+                <li>Listenelement 5</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Das ist ein anderer Abschnitt des Hauptinhalts</h3>
+
+            <!-- img: Bild -->
+            <img src="https://www.hslu.ch/-/media/campus/common/images/gallery/h/standort-luzern/m-suedpol-luftaufnahme.jpg"
+                alt="Ein Bild des Campus Südpols">
+        </section>
+
+        <section>
+            <h3>Das ist ein anderer Abschnitt des Hauptinhalts</h3>
+
+            <!-- video: Automatische Wiedergabe eines Videos (Stumm) -->
+            <video autoplay muted>
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section>
+            <h3>Das ist noch ein Abschnitt des Hauptinhalts</h3>
+
+            <!-- form: Eingabeformular -->
+            <form>
+
+                <!-- fieldset: Gruppierung von Feldern eines Eingabeformulars -->
+                <fieldset>
+                    <!-- legend: Titel eines fieldset -->
+                    <legend>Personalien</legend>
+
+                    <!-- label: Titel eines Eingabefeldes -->
+                    <label for="vorname">Vorname</label>
+
+                    <!-- input: Texteingabefeld -->
+                    <input type="text" id="vorname" name="vorname">
+                    <!-- br: Eine leere Zeile Abstand -->
+                    <br><br>
+
+                    <label for="nachname">Nachname</label>
+                    <input type="text" id="nachname" name="nachname">
+                    <br><br>
+
+                    <!-- input(submit): Knopf zur Bestätigung -->
+                    <input type="submit" value="Absenden">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer: Fuss der Webseite -->
+    <footer>
+        <p>Das ist der Fuss der Webseite</p>
+        <p>&copy; 2022 Hochschule Luzern</p>
+    </footer>
 </body>
 
 </html>
