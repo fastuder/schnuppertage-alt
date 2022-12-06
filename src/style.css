@@ -1,42 +1,84 @@
-/* Wird auf alle Elemente angewendet */
 * {
-    /* Schriftart Arial, Helvetica oder irgendeine serifenlose Schrift */
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style für den gesamten body Abschnitt */
 body {
+  position: relative;
   width: 80%;
   margin: 0 auto;
-}
-
-/* Style für img und video Tags */
-img, video {
-    width: 400px;
-}
-
-/* Style für das Element mit ID "subtitle" */
-#subtitle {
-    font-weight: bold;
-}
-
-/* Style für alle Elemente mit Klasse "input-field" */
-.input-field {
-    padding: 5px;
-}
-
-/* header {
-    border: 2px solid purple;
+  height: 80vh;
 }
 
 main {
-    border: 2px solid black;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-section {
-    border: 1px solid red;
+#chat-messages {
+    position: relative;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-footer {
-    border: 2px solid orange;
-} */
+#chat-messages ul {
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-message > span {
+    border-radius: 5px;
+}
+
+.chat-message[data-receiver] {
+    justify-content: left;
+}
+
+.chat-message[data-sender] {
+    justify-content: right;
+}
+
+.chat-message[data-receiver] > span {
+    background-color: #adca2a;
+    padding: 10px 20px;
+}
+
+.chat-message[data-sender] > span {
+    background-color: #77c5d8;
+    padding: 10px 20px;
+}
+
+#message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#message input {
+    font-size: 1.25em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 0 10px;
+}
+
+#message-input {
+    flex-grow: 1.5;
+}
+
+#message > form {
+    display: flex;
+    align-items: center;
+}

@@ -1,121 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<!-- head: Nicht-sichtbarer Teil der Seite -->
-
 <head>
-    <!-- Ignorieren -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ---------- -->
 
     <!-- Einbinden der CSS Datei -->
-    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Einbinden der JavaScript Datei -->
+    <script src="./script.js" type="module"></script>
+
+    <!-- Zusätzliches benötigtes Skript für Chat Funktion -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 
     <!-- title: Titel der Webseite, nur im Tab sichtbar -->
-    <title>Meine Webseite</title>
+    <title>HSLU Chat App</title>
 </head>
 
-<!-- body: Sichtbarer Teil der Seite -->
-
 <body>
-    <!-- header: Kopf der Webseite -->
     <header>
-        <!-- h1: (Haupt-)Überschrift (h1, h2, ..., h6) -->
-        <h1>Meine Überschrift</h1>
+        <h1>HSLU Chat App</h1>
 
-        <!-- p[id="subtitle"]: Ein Textparagraph mit einer einmaligen ID -->
-        <p id="subtitle">Ein kleiner Untertitel</p>
+        <p id="subtitle">Eine Chat App, gebaut am Schnuppertag Informatik der Hochschule Luzern</p>
     </header>
 
-    <!-- main: Hauptinhalt der Webseite -->
     <main>
-        <!-- h2: Überschrift -->
-        <h2>Das ist der Hauptinhalt</h2>
-
-        <!-- section: Inhaltlicher Abschnitt der Seite -->
-        <section>
-            <!-- h3: Überschrift -->
-            <h3>Das ist ein Abschnitt des Hauptinhalts</h3>
-
-            <!-- p: Textparagraph -->
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur impedit illum nulla repellendus
-                fuga deserunt dolore corrupti molestias, aperiam natus magni, tenetur nesciunt, recusandae saepe commodi
-                alias ex aspernatur aliquam!</p>
-        </section>
-
-        <section>
-            <h3>Das ist ein weiterer Abschnitt des Hauptinhalts</h3>
-
-            <!-- ul: Nicht-numerierte Liste -->
+        <div id="chat-messages">
             <ul>
 
-                <!-- li: Element einer Liste -->
-                <li>Listenelement 1</li>
-                <li>Listenelement 2</li>
-                <li>Listenelement 3</li>
-                <li>Listenelement 4</li>
-                <li>Listenelement 5</li>
             </ul>
-        </section>
-
-        <section>
-            <h3>Das ist ein anderer Abschnitt des Hauptinhalts</h3>
-
-            <!-- img: Bild -->
-            <img src="https://www.hslu.ch/-/media/campus/common/images/gallery/h/standort-luzern/m-suedpol-luftaufnahme.jpg"
-                alt="Ein Bild des Campus Südpols">
-        </section>
-
-        <section>
-            <h3>Das ist ein anderer Abschnitt des Hauptinhalts</h3>
-
-            <!-- video: Automatische Wiedergabe eines Videos (Stumm) -->
-            <video autoplay muted>
-                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-            <h3>Das ist noch ein Abschnitt des Hauptinhalts</h3>
-
-            <!-- form: Eingabeformular -->
+        </div>
+        <div id="message">
             <form>
-
-                <!-- fieldset: Gruppierung von Feldern eines Eingabeformulars -->
-                <fieldset>
-                    <!-- legend: Titel eines fieldset -->
-                    <legend>Personalien</legend>
-
-                    <!-- label: Titel für Eingabefeld mit Namen "vorname" -->
-                    <label for="vorname">Vorname</label>
-
-                    <!-- input: Texteingabefeld mit nicht-eindeutiger Klasse "input-field" -->
-                    <input type="text" id="vorname" name="vorname" class="input-field">
-
-                    <!-- br: Zwei leere Zeilen Abstand -->
-                    <br><br>
-
-                    <label for="nachname">Nachname</label>
-
-                    <!-- input: Texteingabefeld mit nicht-eindeutiger Klasse "input-field" -->
-                    <input type="text" id="nachname" name="nachname" class="input-field">
-                    <br><br>
-
-                    <!-- input(submit): Knopf zur Bestätigung -->
-                    <input type="submit" value="Absenden">
-                </fieldset>
+                <input type="text" name="message" id="message-input">
+                <input type="submit" name="send" id="message-send" value="Senden">
             </form>
-        </section>
+        </div>
     </main>
-
-    <!-- footer: Fuss der Webseite -->
-    <footer>
-        <p>Das ist der Fuss der Webseite</p>
-        <!-- '&copy;': Copyright Zeichen (©) -->
-        <p>&copy; 2022 Hochschule Luzern</p>
-    </footer>
 </body>
 
 </html>
