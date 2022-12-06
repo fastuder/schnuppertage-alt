@@ -15,6 +15,16 @@ img, video {
     width: 400px;
 }
 
+/* Style für das Element mit ID "subtitle" */
+#subtitle {
+    font-weight: bold;
+}
+
+/* Style für alle Elemente mit Klasse "input-field" */
+.input-field {
+    padding: 5px;
+}
+
 /* header {
     border: 2px solid purple;
 }

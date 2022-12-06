@@ -24,7 +24,9 @@
     <header>
         <!-- h1: (Haupt-)Überschrift (h1, h2, ..., h6) -->
         <h1>Meine Überschrift</h1>
-        <p>Ein kleiner Untertitel</p>
+
+        <!-- p[id="subtitle"]: Ein Textparagraph mit einer einmaligen ID -->
+        <p id="subtitle">Ein kleiner Untertitel</p>
     </header>
 
     <!-- main: Hauptinhalt der Webseite -->
@@ -89,13 +91,16 @@
                     <!-- label: Titel eines Eingabefeldes -->
                     <label for="vorname">Vorname</label>
 
-                    <!-- input: Texteingabefeld -->
-                    <input type="text" id="vorname" name="vorname">
-                    <!-- br: Eine leere Zeile Abstand -->
+                    <!-- input: Texteingabefeld mit nicht-eindeutiger Klasse "input-field" -->
+                    <input type="text" id="vorname" name="vorname" class="input-field">
+
+                    <!-- br: Zwei leere Zeilen Abstand -->
                     <br><br>
 
                     <label for="nachname">Nachname</label>
-                    <input type="text" id="nachname" name="nachname">
+
+                    <!-- input: Texteingabefeld mit nicht-eindeutiger Klasse "input-field" -->
+                    <input type="text" id="nachname" name="nachname" class="input-field">
                     <br><br>
 
                     <!-- input(submit): Knopf zur Bestätigung -->
