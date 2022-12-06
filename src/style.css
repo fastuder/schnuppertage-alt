@@ -1,12 +1,16 @@
+/* Wird auf alle Elemente angewendet */
 * {
+    /* Schriftart Arial, Helvetica oder irgendeine serifenlose Schrift */
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Style für den gesamten body Abschnitt */
 body {
   width: 80%;
   margin: 0 auto;
 }
 
+/* Style für img und video Tags */
 img, video {
     width: 400px;
 }
