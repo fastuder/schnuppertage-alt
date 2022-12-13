@@ -6,7 +6,9 @@ import {
   scrollToBottom,
 } from "./framework.js";
 
-const socket = io("http://localhost:6829");
+const socket = io(
+  "http://hslu-schnuppertage-chat-socket-l8dci.ondigitalocean.app:443"
+);
 
 socket.on("message", (msg) => {
   receiveMessage(msg);
