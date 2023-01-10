@@ -8,7 +8,7 @@ const newMessage = (message) => {
   newElement.classList.add("chat-message");
 
   const textSpan = document.createElement("span");
-  textSpan.innerText = message;
+  textSpan.innerHTML = message;
   newElement.appendChild(textSpan);
 
   return newElement;
