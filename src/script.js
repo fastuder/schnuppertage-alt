@@ -13,6 +13,7 @@ const newMessage = (message) => {
   return messageListItem;
 };
 
+// -- Empfangene Nachricht anzeigen
 const receiveMessage = (message) => {
   const newElement = newMessage(message);
   newElement.attr("data-receiver", true);
@@ -20,6 +21,7 @@ const receiveMessage = (message) => {
   chatMessageList.append(newElement);
 };
 
+// -- Gesendete Nachricht anzeigen
 const sendMessage = (message) => {
   const newElement = newMessage(message);
   newElement.attr("data-sender", true);
@@ -33,7 +35,7 @@ const scrollToBottom = () => {
   chatMessageList.scrollTop(chatMessageList.height());
 };
 
-// Verbindung zum Chat Server herstellen.
+// -- Verbindung mit Server herstellen
 const socket = io(
   "https://hslu-schnuppertage-chat-socket-l8dci.ondigitalocean.app"
 );
@@ -44,6 +46,9 @@ const socket = io(
 socket.on("message", (msg) => {
   // Nachricht im Chat anzeigen
   receiveMessage(msg);
+
+  // Den Chat automatisch zur neusten Nachricht herunterscrollen
+  scrollToBottom();
 });
 
 // -- Nachricht senden
@@ -54,9 +59,6 @@ messageForm.submit((e) => {
 
   // Nachricht aus dem Eingabefeld auslesen
   const message = messageInput.val();
-
-  // Prüfen, ob die Eingabe gültig ist
-  // if (message.trim().length === 0) return;
 
   // Nachricht an den Server senden
   socket.emit("message", message);
