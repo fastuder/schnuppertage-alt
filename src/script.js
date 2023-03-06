@@ -35,21 +35,17 @@ const scrollToBottom = () => {
   chatMessageList.scrollTop(chatMessageList.height());
 };
 
-// -- Verbindung mit Server herstellen
-const socket = io(
-  "https://hslu-schnuppertage-chat-socket-l8dci.ondigitalocean.app"
-);
+// Verbindung zum Chat Server herstellen.
+/**
+  Aufgabe 2.3: Schreibe hier deinen Code hin!
+*/
 
 // -- Nachricht empfangen
 // Auf eine neue Nachricht vom Server warten. Bei einer neuen Nachricht den inneren Teil
 // dieses Abschnitts ausführen.
-socket.on("message", (msg) => {
-  // Nachricht im Chat anzeigen
-  receiveMessage(msg);
-
-  // Den Chat automatisch zur neusten Nachricht herunterscrollen
-  scrollToBottom();
-});
+/**
+  Aufgabe 2.4: Schreibe hier deinen Code hin!
+*/
 
 // -- Nachricht senden
 // Auf Absenden des Formulars zum Senden einer Nachricht warten. Beim Absenden den inneren Teil
@@ -57,18 +53,7 @@ socket.on("message", (msg) => {
 messageForm.submit((e) => {
   e.preventDefault();
 
-  // Nachricht aus dem Eingabefeld auslesen
-  const message = messageInput.val();
-
-  // Nachricht an den Server senden
-  socket.emit("message", message);
-
-  // Nachricht im Chat anzeigen
-  sendMessage(message);
-
-  // Den Chat automatisch zur neusten Nachricht herunterscrollen
-  scrollToBottom();
-
-  // Das Eingabefeld der Nachricht leeren
-  messageInput.val("");
+  /**
+    Aufgabe 2.5: Schreibe hier deinen Code hin!
+  */
 });
