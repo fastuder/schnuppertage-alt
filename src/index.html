@@ -24,10 +24,33 @@
 </head>
 
 <body>
-    <header>
-        <h1>HSLU Chat App</h1>
+    <!-- Eingebetteter JavaScript Code für dynamische Funktionen -->
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/petite-vue?module'
 
-        <p id="subtitle">Eine Chat App, gebaut am Schnuppertag Informatik der Hochschule Luzern</p>
+        createApp({
+            displayName: "",
+            nameInput: "",
+            setUsername() {
+                this.displayName = this.nameInput
+            },
+            get showUsernameForm() {
+                return this.displayName === "";
+            }
+        }).mount()
+    </script>
+
+    <header v-scope>
+        <h1>HSLU Chat App</h1>
+        <p id="subtitle">Eine Chat App, gebaut am Schnuppertag Informatik der Hochschule Luzern. </p>
+
+        <div v-if="showUsernameForm">
+            <input id="username" name="username" type="text" v-model="nameInput" placeholder="Benutzername" />
+
+            <button type="button" @click="setUsername">Speichern</button>
+        </div>
+
+        <p v-else>Angemeldet als: {{ displayName }}</p>
     </header>
 
     <main>
